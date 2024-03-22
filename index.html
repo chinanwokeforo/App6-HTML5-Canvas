@@ -89,23 +89,18 @@ canvas {
 	<p>DIY!</p>
 </footer>
 
-<script>
-	 // Get the canvas element
-       var canvas = document.getElementById("myCanvas");
+  <script>
+        // Get the canvas element
+        var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
 
         // Function to draw image onto the canvas
         function drawImage() {
             var img = new Image();
             img.onload = function() {
-                // Set canvas width and height to match image dimensions
-                canvas.width = img.width;
-                canvas.height = img.height;
-
-                // Draw the image at position (0, 0) covering the entire canvas
-                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 50, 50); // Draw the image at position (50, 50)
             };
-            img.src = "cat.jpg"; 
+            img.src = "cat.jpg"; // Replace "cat.jpg" with the path to your image
         }
 
         // Function to clear the canvas
