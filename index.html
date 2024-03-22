@@ -74,9 +74,49 @@ console.log("This file last modified " + docMod); // generates message in javaSc
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
+	<canvas id="myCanvas" width="300" height="150"></canvas>
+	 <!-- Buttons for drawing shapes -->
+        <button onclick="drawRectangle()">Draw Rectangle</button>
+        <button onclick="drawName()">Draw Name</button>
+        <button onclick="drawImage()">Load Image</button>
+        <button onclick="clearCanvas()">Clear Canvas</button>
+</div>
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
+
+<script>
+	 // Get the canvas element
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Function to draw a rectangle on the canvas
+        function drawRectangle() {
+            ctx.fillStyle = "red";
+            ctx.fillRect(20, 20, 50, 50);
+        }
+
+        // Function to draw your name on the canvas
+        function drawName() {
+            ctx.font = "30px Arial";
+            ctx.fillStyle = "blue";
+            ctx.fillText("Your Name", 50, 100);
+        }
+
+        // Function to load an image onto the canvas
+        function drawImage() {
+            var img = new Image();
+            img.onload = function() {
+                ctx.drawImage(img, 10, 10);
+            };
+            img.src = "image.jpg"; // Replace "image.jpg" with the path to your image
+        }
+
+        // Function to clear the canvas
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+</script>
 
 </body>
 </html>
