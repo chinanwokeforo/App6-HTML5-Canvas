@@ -90,7 +90,7 @@ canvas {
 </footer>
 
   <script>
-        // Get the canvas element
+       // Get the canvas element
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
 
@@ -106,16 +106,18 @@ canvas {
         // Function to clear the canvas
         function clearCanvas() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
 
-		
-	// function to write my name 
+        // Function to write your name on the canvas
+        function drawName() {
+            ctx.font = '30px Arial';
+            ctx.fillText('China', 50, 150); // Write the name at position (50, 150)
+        }
 
-	function drawName() {
-    ctx.font = '30px Arial';
-    ctx.fillText('china', 50, 150);
-}
-
-		
+        // Function to draw a rectangle on the canvas
+        function drawRectangle() {
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(50, 50, 100, 80); // Draw a rectangle at position (50, 50) with width 100 and height 80
         }
 </script>
 
