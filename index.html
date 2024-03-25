@@ -106,6 +106,16 @@ canvas {
         // Function to clear the canvas
         function clearCanvas() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+		
+	// function to write my name 
+	function drawName () {
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+		ctx.font = "40px Timesnewroman";
+		ctx.fillText(" china ",10,50);
+
+		
         }
 </script>
 
