@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+china nwokeforo
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,10 +17,11 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+goal is to have 4 buttons that can add a rectangle, add my name, add an image, and clear the canvas.
  
 Known Issues:
-blah, blah, blah, blah
+my only issues so far is making the image show up properly and centering the functions.
+	
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -110,14 +111,23 @@ canvas {
 
         // Function to write your name on the canvas
         function drawName() {
-            ctx.font = '30px Arial';
-            ctx.fillText('China', 50, 150); // Write the name at position (50, 150)
+            ctx.font = 'italic bold 30px Times New Roman';
+            ctx.fillStyle = 'black';
+            var text = 'China';
+            var textWidth = ctx.measureText(text).width;
+            var x = (canvas.width - textWidth) / 2; // Center horizontally
+            var y = canvas.height / 2; // Center vertically
+            ctx.fillText(text, x, y); // Write the name at the calculated position
         }
 
         // Function to draw a rectangle on the canvas
         function drawRectangle() {
-            ctx.fillStyle = 'blue';
-            ctx.fillRect(50, 50, 100, 80); // Draw a rectangle at position (50, 50) with width 100 and height 80
+           ctx.fillStyle = 'blue';
+            var rectWidth = 150;
+            var rectHeight = 100;
+            var x = (canvas.width - rectWidth) / 2; // Center horizontally
+            var y = (canvas.height - rectHeight) / 2; // Center vertically
+            ctx.fillRect(x, y, rectWidth, rectHeight); // Draw a rectangle at the calculated position
         }
 </script>
 
